@@ -46,9 +46,7 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
     const {email, password} = req.body;
 
-    const finded = users.find( user => {
-        return user.userMail === email && user.userPass === password
-    });
+    const finded = users.find( user => user.userMail === email && user.userPass === password);
 
     res.json(finded);
 });
